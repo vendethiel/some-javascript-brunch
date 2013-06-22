@@ -5,12 +5,11 @@ module.exports = class SomeJavaScriptCompiler
 
   (config) -> @files = config.plugins.javascripts
 
-  compile: (data, path, callback) ->
+  compile: !(data, path, callback) ->
     try
       path.=replace /\\/g '/' #'
       callback null, if path in @files
         data
-      else
-        ""
+      else null
     catch
       callback e

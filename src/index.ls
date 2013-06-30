@@ -3,12 +3,16 @@ module.exports = class SomeJavaScriptCompiler
   type: 'javascript'
   extension: 'js'
 
-  (config) -> @files = config.plugins.javascripts
+  (config) ->
+    @files = config.plugins.javascripts
+
+  isValid: ->
+    it in @files or 0 is it.indexOf 'vendor/scripts/brunch'
 
   compile: !(data, path, callback) ->
     try
       path.=replace /\\/g '/' #'
-      callback null, if path in @files
+      callback null, if @isValid path
         data
       else null
     catch

@@ -1,6 +1,6 @@
 {
   "name": "some-javascript-brunch",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Allows you to make Brunch compile only the javascripts you want.",
   "github": "Nami-Doc/some-javascript-brunch",
   "main": "./lib/index"

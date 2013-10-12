@@ -1,3 +1,6 @@
+# Deprecated since Brunch1.7 integrates Bower.
+
+
 Some JavaScript Brunch
 ======================
 
